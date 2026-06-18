@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results retried="1" ignored="0" total="13" passed="12" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-06-18T20:34:39 IST" name="Suite" finished-at="2026-06-18T20:36:37 IST" duration-ms="118226">
+    <groups>
+    </groups>
+    <test started-at="2026-06-18T20:34:39 IST" name="Test" finished-at="2026-06-18T20:36:37 IST" duration-ms="118226">
+      <class name="tests.DraggableTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.DraggableTest@1f2586d6]" started-at="2026-06-18T20:34:39 IST" name="setUp" finished-at="2026-06-18T20:34:48 IST" duration-ms="8721" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testSimpleDraggable()[pri:1, instance:tests.DraggableTest@1f2586d6]" started-at="2026-06-18T20:34:48 IST" name="testSimpleDraggable" finished-at="2026-06-18T20:35:00 IST" duration-ms="12128" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSimpleDraggable -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.DraggableTest@1f2586d6]" started-at="2026-06-18T20:35:00 IST" name="tearDown" finished-at="2026-06-18T20:35:15 IST" duration-ms="15005" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.DraggableTest@1f2586d6]" started-at="2026-06-18T20:35:15 IST" name="setUp" finished-at="2026-06-18T20:35:20 IST" duration-ms="4737" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testAxisRestrictedDraggable()[pri:2, instance:tests.DraggableTest@1f2586d6]" started-at="2026-06-18T20:35:20 IST" name="testAxisRestrictedDraggable" finished-at="2026-06-18T20:35:30 IST" duration-ms="10495" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAxisRestrictedDraggable -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.DraggableTest@1f2586d6]" started-at="2026-06-18T20:35:30 IST" name="tearDown" finished-at="2026-06-18T20:35:44 IST" duration-ms="13629" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.DraggableTest@1f2586d6]" started-at="2026-06-18T20:35:44 IST" name="setUp" finished-at="2026-06-18T20:35:48 IST" duration-ms="4018" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method retried="true" signature="testCursorStyleDraggable()[pri:3, instance:tests.DraggableTest@1f2586d6]" started-at="2026-06-18T20:35:48 IST" name="testCursorStyleDraggable" finished-at="2026-06-18T20:35:58 IST" duration-ms="9992" status="SKIP">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Cursor Center box failed to move! did not expect [(245, 287)] but found [(245, 287)]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Cursor Center box failed to move! did not expect [(245, 287)] but found [(245, 287)]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failEquals(Assert.java:1594)
+at org.testng.Assert.assertNotEqualsImpl(Assert.java:157)
+at org.testng.Assert.assertNotEquals(Assert.java:2205)
+at tests.DraggableTest.testCursorStyleDraggable(DraggableTest.java:68)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:697)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:1005)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1583)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCursorStyleDraggable -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.DraggableTest@1f2586d6]" started-at="2026-06-18T20:35:58 IST" name="tearDown" finished-at="2026-06-18T20:36:02 IST" duration-ms="3791" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.DraggableTest@1f2586d6]" started-at="2026-06-18T20:36:02 IST" name="setUp" finished-at="2026-06-18T20:36:05 IST" duration-ms="3096" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testCursorStyleDraggable()[pri:3, instance:tests.DraggableTest@1f2586d6]" started-at="2026-06-18T20:36:05 IST" name="testCursorStyleDraggable" finished-at="2026-06-18T20:36:14 IST" duration-ms="9296" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCursorStyleDraggable -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.DraggableTest@1f2586d6]" started-at="2026-06-18T20:36:14 IST" name="tearDown" finished-at="2026-06-18T20:36:20 IST" duration-ms="5520" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.DraggableTest@1f2586d6]" started-at="2026-06-18T20:36:20 IST" name="setUp" finished-at="2026-06-18T20:36:22 IST" duration-ms="2819" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testContainerRestrictedElegant()[pri:4, instance:tests.DraggableTest@1f2586d6]" started-at="2026-06-18T20:36:22 IST" name="testContainerRestrictedElegant" finished-at="2026-06-18T20:36:32 IST" duration-ms="9330" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testContainerRestrictedElegant -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.DraggableTest@1f2586d6]" started-at="2026-06-18T20:36:32 IST" name="tearDown" finished-at="2026-06-18T20:36:37 IST" duration-ms="5356" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.DraggableTest -->
+      <class name="tests.ResizableTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.ResizableTest@2f4948e4]" started-at="2026-06-18T20:34:39 IST" name="setUp" finished-at="2026-06-18T20:34:46 IST" duration-ms="7098" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testResizableBoxWithRestriction()[pri:1, instance:tests.ResizableTest@2f4948e4]" started-at="2026-06-18T20:34:46 IST" name="testResizableBoxWithRestriction" finished-at="2026-06-18T20:35:00 IST" duration-ms="13911" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testResizableBoxWithRestriction -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.ResizableTest@2f4948e4]" started-at="2026-06-18T20:35:00 IST" name="tearDown" finished-at="2026-06-18T20:35:16 IST" duration-ms="15808" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.ResizableTest@2f4948e4]" started-at="2026-06-18T20:35:16 IST" name="setUp" finished-at="2026-06-18T20:35:24 IST" duration-ms="7927" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testResizableBoxWithoutRestriction()[pri:2, instance:tests.ResizableTest@2f4948e4]" started-at="2026-06-18T20:35:24 IST" name="testResizableBoxWithoutRestriction" finished-at="2026-06-18T20:35:37 IST" duration-ms="13220" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testResizableBoxWithoutRestriction -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.ResizableTest@2f4948e4]" started-at="2026-06-18T20:35:37 IST" name="tearDown" finished-at="2026-06-18T20:35:45 IST" duration-ms="7881" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.ResizableTest -->
+      <class name="tests.DroppableTests">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.DroppableTests@6a78afa0]" started-at="2026-06-18T20:34:39 IST" name="setUp" finished-at="2026-06-18T20:34:46 IST" duration-ms="7044" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="preventPropagationDroppable()[pri:3, instance:tests.DroppableTests@6a78afa0]" started-at="2026-06-18T20:34:46 IST" name="preventPropagationDroppable" finished-at="2026-06-18T20:35:03 IST" duration-ms="16416" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- preventPropagationDroppable -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.DroppableTests@6a78afa0]" started-at="2026-06-18T20:35:03 IST" name="tearDown" finished-at="2026-06-18T20:35:28 IST" duration-ms="25465" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.DroppableTests@6a78afa0]" started-at="2026-06-18T20:35:28 IST" name="setUp" finished-at="2026-06-18T20:35:32 IST" duration-ms="4368" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testRevertDraggable()[pri:4, instance:tests.DroppableTests@6a78afa0]" started-at="2026-06-18T20:35:32 IST" name="testRevertDraggable" finished-at="2026-06-18T20:35:50 IST" duration-ms="17240" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRevertDraggable -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.DroppableTests@6a78afa0]" started-at="2026-06-18T20:35:50 IST" name="tearDown" finished-at="2026-06-18T20:35:55 IST" duration-ms="5204" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.DroppableTests -->
+      <class name="tests.SortableTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.SortableTest@10683d9d]" started-at="2026-06-18T20:34:39 IST" name="setUp" finished-at="2026-06-18T20:34:46 IST" duration-ms="6953" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testSortableList()[pri:1, instance:tests.SortableTest@10683d9d]" started-at="2026-06-18T20:34:46 IST" name="testSortableList" finished-at="2026-06-18T20:34:57 IST" duration-ms="10615" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSortableList -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.SortableTest@10683d9d]" started-at="2026-06-18T20:34:57 IST" name="tearDown" finished-at="2026-06-18T20:35:16 IST" duration-ms="18922" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.SortableTest@10683d9d]" started-at="2026-06-18T20:35:16 IST" name="setUp" finished-at="2026-06-18T20:35:22 IST" duration-ms="6224" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testSortableGrid()[pri:2, instance:tests.SortableTest@10683d9d]" started-at="2026-06-18T20:35:22 IST" name="testSortableGrid" finished-at="2026-06-18T20:35:35 IST" duration-ms="13285" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSortableGrid -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.SortableTest@10683d9d]" started-at="2026-06-18T20:35:35 IST" name="tearDown" finished-at="2026-06-18T20:35:45 IST" duration-ms="9753" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.SortableTest -->
+      <class name="tests.SelectableTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.SelectableTest@7b98f307]" started-at="2026-06-18T20:34:39 IST" name="setUp" finished-at="2026-06-18T20:34:46 IST" duration-ms="7016" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testSelectableList()[pri:1, instance:tests.SelectableTest@7b98f307]" started-at="2026-06-18T20:34:46 IST" name="testSelectableList" finished-at="2026-06-18T20:35:00 IST" duration-ms="13597" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSelectableList -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.SelectableTest@7b98f307]" started-at="2026-06-18T20:35:00 IST" name="tearDown" finished-at="2026-06-18T20:35:08 IST" duration-ms="8720" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.SelectableTest@7b98f307]" started-at="2026-06-18T20:35:08 IST" name="setUp" finished-at="2026-06-18T20:35:12 IST" duration-ms="3973" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testSelectableGrid()[pri:2, instance:tests.SelectableTest@7b98f307]" started-at="2026-06-18T20:35:12 IST" name="testSelectableGrid" finished-at="2026-06-18T20:35:19 IST" duration-ms="6766" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSelectableGrid -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.SelectableTest@7b98f307]" started-at="2026-06-18T20:35:19 IST" name="tearDown" finished-at="2026-06-18T20:35:43 IST" duration-ms="24056" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.SelectableTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
