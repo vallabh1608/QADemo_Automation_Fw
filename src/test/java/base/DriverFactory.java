@@ -158,14 +158,15 @@ public class DriverFactory {
                 // Jenkins SYSTEM account stability flags
                 edgeOptions.addArguments("--disable-dev-shm-usage");
                 edgeOptions.addArguments("--no-sandbox");
-                
-                // --- CRITICAL FIX FOR DEVTOOLS ACTIVE PORT ---
                 edgeOptions.addArguments("--remote-allow-origins=*");
-                edgeOptions.addArguments("--user-data-dir=C:\\Windows\\Temp\\EdgeProfile");
+                
+                // ✅ CRITICAL FIX: Unique profile for parallel execution
+                String uniqueProfile = System.getProperty("java.io.tmpdir") + "EdgeProfile_" + Thread.currentThread().getId();
+                edgeOptions.addArguments("--user-data-dir=" + uniqueProfile);
 
                 if (isHeadless) {
                     edgeOptions.addArguments("--headless=new");
-                    edgeOptions.addArguments("--disable-gpu"); // Add this for Windows SYSTEM
+                    edgeOptions.addArguments("--disable-gpu"); 
                     edgeOptions.addArguments("--window-size=1920,1080");
                 } else {
                     edgeOptions.addArguments("--start-maximized");
