@@ -69,26 +69,33 @@ public class DroppablePage extends BasePage {
 
     // -------- SIMPLE --------
     public void dragSimpleBox() {
-        dragAndDrop(simpleSource, simpleTarget);
+        try {
+            dragAndDrop(simpleSource, simpleTarget);
+        } catch (Exception e) {
+            dragAndDropJS(simpleSource, simpleTarget); // ✅ fallback
+        }
     }
 
     public String getSimpleTargetText() {
         return simpleTarget.getText();
     }
 
-    // -------- ACCEPT (✅ FINAL FIX) --------
+
     public void clickAcceptTab() {
         clickElement(acceptTab);
 
-        // ✅ wait until correct container visible
         wait.until(ExpectedConditions.visibilityOfElementLocated(
                 By.id("acceptDropContainer")
         ));
 
-        // ✅ ensure droppable is visible
         wait.until(ExpectedConditions.visibilityOfElementLocated(
                 By.cssSelector("#acceptDropContainer #droppable")
         ));
+
+        // ✅ ADD THIS (important for React UI)
+        try {
+            Thread.sleep(500);
+        } catch (Exception e) {}
     }
 
     // ✅ always fetch latest element
@@ -99,11 +106,19 @@ public class DroppablePage extends BasePage {
     }
 
     public void dragNotAcceptableBox() {
-        dragAndDrop(notAcceptableSource, getAcceptTarget());
+        try {
+            dragAndDrop(notAcceptableSource, getAcceptTarget());
+        } catch (Exception e) {
+            dragAndDropJS(notAcceptableSource, getAcceptTarget());
+        }
     }
 
     public void dragAcceptableBox() {
-        dragAndDrop(acceptableSource, getAcceptTarget());
+        try {
+            dragAndDrop(acceptableSource, getAcceptTarget());
+        } catch (Exception e) {
+            dragAndDropJS(acceptableSource, getAcceptTarget());
+        }
     }
 
     public String getAcceptTargetText() {

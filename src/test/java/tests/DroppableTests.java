@@ -18,7 +18,7 @@ public class DroppableTests extends BaseTest {
 //
 //        Assert.assertEquals(page.getSimpleTargetText(), "Dropped!");
 //    }
-//
+
 //    @Test(priority = 2)
 //    public void acceptableDragAndDrop() {
 //        DroppablePage page = new DroppablePage(getDriver());
@@ -33,7 +33,7 @@ public class DroppableTests extends BaseTest {
 //        Assert.assertEquals(page.getAcceptTargetText(), "Dropped!");
 //    }
 
-    @Test(priority = 3)
+    @Test(priority = 1)
     public void preventPropagationDroppable() {
         DroppablePage page = new DroppablePage(getDriver());
 
@@ -49,7 +49,7 @@ public class DroppableTests extends BaseTest {
         Assert.assertFalse(page.getGreedyOuterClass().contains("ui-state-highlight"));
     }
 
-    @Test(priority = 4)
+    @Test(priority = 2)
     public void testRevertDraggable() {
         DroppablePage page = new DroppablePage(getDriver());
 

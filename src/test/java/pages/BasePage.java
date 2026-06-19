@@ -63,19 +63,41 @@ public class BasePage {
     }
 
     // ✅ ✅ 🔥 NEW: Stable Drag & Drop (COMMON METHOD)
+//    protected void dragAndDrop(WebElement source, WebElement target) {
+//
+//        waitForVisibility(source);
+//        waitForVisibility(target);
+//
+//        scrollIntoViewCenter(source);
+//        scrollIntoViewCenter(target);
+//
+//        actions.moveToElement(source)
+//                .pause(Duration.ofMillis(300))
+//                .clickAndHold()
+//                .pause(Duration.ofMillis(500))
+//                .moveToElement(target)  // ✅ no offset first
+//                .pause(Duration.ofMillis(500))
+//                .moveByOffset(10, 10)   // ✅ small nudge to trigger drop
+//                .pause(Duration.ofMillis(500))
+//                .release()
+//                .perform();
+//    }
     protected void dragAndDrop(WebElement source, WebElement target) {
 
         waitForVisibility(source);
         waitForVisibility(target);
 
+        scrollIntoViewCenter(source);
         scrollIntoViewCenter(target);
 
-        actions.pause(Duration.ofMillis(300)).perform();
-
-        actions.clickAndHold(source)
-                .pause(Duration.ofMillis(500))
-                .moveToElement(target, 10, 10)   // ✅ precise drop
-                .pause(Duration.ofMillis(500))
+        actions.moveToElement(source)
+                .pause(Duration.ofMillis(300))
+                .clickAndHold()
+                .pause(Duration.ofMillis(400))
+                .moveToElement(target)
+                .pause(Duration.ofMillis(400))
+                .moveByOffset(10, 10)
+                .pause(Duration.ofMillis(400))
                 .release()
                 .perform();
     }
