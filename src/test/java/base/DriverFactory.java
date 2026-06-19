@@ -155,14 +155,13 @@ public class DriverFactory {
             case "edge":
                 EdgeOptions edgeOptions = new EdgeOptions();
 
-                // Jenkins SYSTEM account stability flags
+                // Standard Jenkins stability flags
                 edgeOptions.addArguments("--disable-dev-shm-usage");
                 edgeOptions.addArguments("--no-sandbox");
                 edgeOptions.addArguments("--remote-allow-origins=*");
                 
-                // ✅ CRITICAL FIX: Unique profile for parallel execution
-                String uniqueProfile = System.getProperty("java.io.tmpdir") + "EdgeProfile_" + Thread.currentThread().getId();
-                edgeOptions.addArguments("--user-data-dir=" + uniqueProfile);
+                // ✅ THE ULTIMATE FIX: Bypass the file system entirely
+                edgeOptions.addArguments("--remote-debugging-pipe");
 
                 if (isHeadless) {
                     edgeOptions.addArguments("--headless=new");
