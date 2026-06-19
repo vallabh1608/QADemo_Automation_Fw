@@ -138,12 +138,21 @@ public class DriverFactory {
             case "chrome":
                 ChromeOptions chromeOptions = new ChromeOptions();
 
-                // Jenkins stability flags
+                // Standard Jenkins SYSTEM account stability flags
                 chromeOptions.addArguments("--no-sandbox");
                 chromeOptions.addArguments("--disable-dev-shm-usage");
+                chromeOptions.addArguments("--remote-allow-origins=*");
+                
+                // Bypass the file system entirely
+                chromeOptions.addArguments("--remote-debugging-pipe");
+                
+                // Prevent background scripts from hanging the renderer
+                chromeOptions.addArguments("--disable-extensions"); 
 
                 if (isHeadless) {
-                    chromeOptions.addArguments("--headless=new");
+                    // Use classic headless, not "new", to prevent UI render hangs
+                    chromeOptions.addArguments("--headless"); 
+                    chromeOptions.addArguments("--disable-gpu"); 
                     chromeOptions.addArguments("--window-size=1920,1080");
                 } else {
                     chromeOptions.addArguments("--start-maximized");
@@ -155,16 +164,20 @@ public class DriverFactory {
             case "edge":
                 EdgeOptions edgeOptions = new EdgeOptions();
 
-                // Standard Jenkins stability flags
+                // Standard Jenkins SYSTEM account stability flags
                 edgeOptions.addArguments("--disable-dev-shm-usage");
                 edgeOptions.addArguments("--no-sandbox");
                 edgeOptions.addArguments("--remote-allow-origins=*");
                 
                 // ✅ THE ULTIMATE FIX: Bypass the file system entirely
                 edgeOptions.addArguments("--remote-debugging-pipe");
+                
+                // Prevent background scripts from hanging the renderer
+                edgeOptions.addArguments("--disable-extensions");
 
                 if (isHeadless) {
-                    edgeOptions.addArguments("--headless=new");
+                    // Use classic headless, not "new", to prevent UI render hangs
+                    edgeOptions.addArguments("--headless"); 
                     edgeOptions.addArguments("--disable-gpu"); 
                     edgeOptions.addArguments("--window-size=1920,1080");
                 } else {
