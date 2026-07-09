@@ -10,35 +10,35 @@ import java.util.Set;
 
 public class SelectableTest extends BaseTest {
 
-    @Test(priority = 1)
+    @Test(priority = 1, description = "Verify random selection of elements in a vertical List format")
     public void testSelectableList() {
         SelectablePage selectablePage = new SelectablePage(getDriver());
         
         selectablePage.navigateToSelectablePage();
         selectablePage.clickListTab();
         
-        // Act: Select 2 random items
+        // Select 2 random items
         Set<WebElement> selectedItems = selectablePage.selectRandomItemsFromList(2);
         
-        // Assert: Verify all selected items received the 'active' class
+        // Verify all selected items received the 'active' class styling
         for(WebElement item : selectedItems) {
-            Assert.assertTrue(item.getAttribute("class").contains("active"), "List Item '" + item.getText() + "' was not selected!");
+            Assert.assertTrue(item.getAttribute("class").contains("active"), "List Item '" + item.getText() + "' was not properly highlighted as active.");
         }
     }
 
-    @Test(priority = 2)
+    @Test(priority = 2, description = "Verify random selection of elements in a Grid format")
     public void testSelectableGrid() {
         SelectablePage selectablePage = new SelectablePage(getDriver());
         
         selectablePage.navigateToSelectablePage();
         selectablePage.clickGridTab();
         
-        // Act: Select 2 random items
-        Set<WebElement> selectedItems = selectablePage.selectRandomItemsFromGrid(2);
+        // Select 3 random items from the grid
+        Set<WebElement> selectedItems = selectablePage.selectRandomItemsFromGrid(3);
         
-        // Assert: Verify all selected items received the 'active' class
+        // Verify all selected items received the 'active' class styling
         for(WebElement item : selectedItems) {
-            Assert.assertTrue(item.getAttribute("class").contains("active"), "Grid Item '" + item.getText() + "' was not selected!");
+            Assert.assertTrue(item.getAttribute("class").contains("active"), "Grid Item '" + item.getText() + "' was not properly highlighted as active.");
         }
     }
 }

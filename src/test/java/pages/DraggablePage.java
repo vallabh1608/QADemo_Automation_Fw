@@ -3,6 +3,7 @@ package pages;
 import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 
 import java.time.Duration;
@@ -47,37 +48,38 @@ public class DraggablePage extends BasePage {
 	}
 
 	private void performDrag(WebElement element, int xOffset, int yOffset) {
-		waitForVisibility(element);
-		scrollIntoViewCenter(element);
-		actions.moveToElement(element).perform();
-		actions.pause(Duration.ofMillis(200)).perform();
-		actions.clickAndHold(element).perform();
-		actions.pause(Duration.ofMillis(200)).perform();
-		actions.moveByOffset(xOffset, yOffset).perform();
-		actions.pause(Duration.ofMillis(200)).perform();
-		actions.release().perform();
+		WebElement targetElement = waitForElement(element);
+		Actions actions = new Actions(driver);
+		actions.moveToElement(targetElement)
+				.pause(Duration.ofMillis(200))
+				.clickAndHold(targetElement)
+				.pause(Duration.ofMillis(200))
+				.moveByOffset(xOffset, yOffset)
+				.pause(Duration.ofMillis(200))
+				.release()
+				.perform();
 	}
 
 	private void performSlowGrabDrag(WebElement element, int xOffset, int yOffset) {
-		waitForVisibility(element);
-		scrollIntoViewCenter(element);
-		actions.moveToElement(element).perform();
-		actions.pause(Duration.ofMillis(500)).perform();
-		actions.clickAndHold(element).perform();
-		actions.pause(Duration.ofMillis(500)).perform();
-		actions.moveByOffset(xOffset, yOffset).perform();
-		actions.pause(Duration.ofMillis(500)).perform();
-		actions.release().perform();
+		WebElement targetElement = waitForElement(element);
+		Actions actions = new Actions(driver);
+		actions.moveToElement(targetElement)
+				.pause(Duration.ofMillis(500))
+				.clickAndHold(targetElement)
+				.pause(Duration.ofMillis(500))
+				.moveByOffset(xOffset, yOffset)
+				.pause(Duration.ofMillis(500))
+				.release()
+				.perform();
 	}
 
 	// Tab Methods
 	public void clickSimpleTab() {
 		clickElement(simpleTab);
-		actions.pause(Duration.ofMillis(300)).perform();
 	}
 
 	public Point getSimpleBoxLocation() {
-		return waitForVisibility(dragBox).getLocation();
+		return waitForElement(dragBox).getLocation();
 	}
 
 	public void dragSimpleBox(int x, int y) {
@@ -86,11 +88,10 @@ public class DraggablePage extends BasePage {
 
 	public void clickAxisTab() {
 		clickElement(axisTab);
-		actions.pause(Duration.ofMillis(300)).perform();
 	}
 
 	public Point getRestrictedXBoxLocation() {
-		return waitForVisibility(restrictedXBox).getLocation();
+		return waitForElement(restrictedXBox).getLocation();
 	}
 
 	public void dragRestrictedXBox(int x, int y) {
@@ -98,7 +99,7 @@ public class DraggablePage extends BasePage {
 	}
 
 	public Point getRestrictedYBoxLocation() {
-		return waitForVisibility(restrictedYBox).getLocation();
+		return waitForElement(restrictedYBox).getLocation();
 	}
 
 	public void dragRestrictedYBox(int x, int y) {
@@ -107,11 +108,10 @@ public class DraggablePage extends BasePage {
 
 	public void clickCursorTab() {
 		clickElement(cursorTab);
-		actions.pause(Duration.ofMillis(300)).perform();
 	}
 
 	public Point getCursorCenterLocation() {
-		return waitForVisibility(cursorCenter).getLocation();
+		return waitForElement(cursorCenter).getLocation();
 	}
 
 	public void dragCursorCenter(int x, int y) {
@@ -119,7 +119,7 @@ public class DraggablePage extends BasePage {
 	}
 
 	public Point getCursorTopLeftLocation() {
-		return waitForVisibility(cursorTopLeft).getLocation();
+		return waitForElement(cursorTopLeft).getLocation();
 	}
 
 	public void dragCursorTopLeft(int x, int y) {
@@ -127,7 +127,7 @@ public class DraggablePage extends BasePage {
 	}
 
 	public Point getCursorBottomLocation() {
-		return waitForVisibility(cursorBottom).getLocation();
+		return waitForElement(cursorBottom).getLocation();
 	}
 
 	public void dragCursorBottom(int x, int y) {
@@ -136,11 +136,10 @@ public class DraggablePage extends BasePage {
 
 	public void clickContainerTab() {
 		clickElement(containerTab);
-		actions.pause(Duration.ofMillis(300)).perform();
 	}
 
 	public Point getBoxDraggableLocation() {
-		return waitForVisibility(boxDraggable).getLocation();
+		return waitForElement(boxDraggable).getLocation();
 	}
 
 	public void dragBoxInsideContainer(int x, int y) {
@@ -148,7 +147,7 @@ public class DraggablePage extends BasePage {
 	}
 
 	public Point getParentDraggableLocation() {
-		return waitForVisibility(parentDraggable).getLocation();
+		return waitForElement(parentDraggable).getLocation();
 	}
 
 	public void dragSpanInsideParent(int x, int y) {

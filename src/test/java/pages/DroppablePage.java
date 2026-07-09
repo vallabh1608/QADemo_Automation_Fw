@@ -1,22 +1,183 @@
+//package pages;
+//
+//import org.openqa.selenium.By;
+//import org.openqa.selenium.Point;
+//import org.openqa.selenium.WebDriver;
+//import org.openqa.selenium.WebElement;
+//import org.openqa.selenium.support.FindBy;
+//
+//// Importing from the reusable JAR
+//import com.automation.utils.js.JSExecutorUtils;
+//
+//public class DroppablePage extends BasePage {
+//
+//    @FindBy(css = "#simpleDropContainer #draggable")
+//    private WebElement simpleSource;
+//
+//    @FindBy(css = "#simpleDropContainer #droppable")
+//    private WebElement simpleTarget;
+//
+//    @FindBy(id = "droppableExample-tab-accept")
+//    private WebElement acceptTab;
+//
+//    @FindBy(id = "acceptable")
+//    private WebElement acceptableSource;
+//
+//    @FindBy(id = "notAcceptable")   
+//    private WebElement notAcceptableSource;
+//
+//    @FindBy(id = "droppableExample-tab-preventPropogation")
+//    private WebElement preventTab;
+//
+//    @FindBy(id = "dragBox")
+//    private WebElement preventSource;
+//
+//    @FindBy(id = "notGreedyInnerDropBox")
+//    private WebElement notGreedyInner;
+//
+//    @FindBy(id = "notGreedyDropBox")
+//    private WebElement notGreedyOuter;
+//
+//    @FindBy(id = "greedyDropBoxInner")
+//    private WebElement greedyInner;
+//
+//    @FindBy(id = "greedyDropBox")
+//    private WebElement greedyOuter;
+//
+//    @FindBy(id = "droppableExample-tab-revertable")
+//    private WebElement revertTab;
+//
+//    @FindBy(id = "revertable")
+//    private WebElement willRevertSource;
+//
+//    @FindBy(id = "notRevertable")
+//    private WebElement notRevertSource;
+//
+//    public DroppablePage(WebDriver driver) {
+//        super(driver);
+//    }
+//
+//    public void navigateToDroppablePage() {
+//        driver.get("https://demoqa.com/droppable");
+//        driver.navigate().refresh();
+//        disableTextSelection();
+//    }
+//
+//    public void dragSimpleBox() {
+//        try {
+//            performDragAndDrop(simpleSource, simpleTarget);
+//        } catch (Exception e) {
+//            JSExecutorUtils.dragAndDropJS(driver, simpleSource, simpleTarget); 
+//        }
+//    }
+//
+//    public String getSimpleTargetText() {
+//        return waitForElement(simpleTarget).getText();
+//    }
+//
+//    public void clickAcceptTab() {
+//        clickElement(acceptTab);
+//        waitForElement(driver.findElement(By.id("acceptDropContainer")));
+//        try { Thread.sleep(500); } catch (Exception e) {} // React UI render buffer
+//    }
+//
+//    private WebElement getAcceptTarget() {
+//        return waitForElement(driver.findElement(By.cssSelector("#acceptDropContainer #droppable")));
+//    }
+//
+//    public void dragNotAcceptableBox() {
+//        try {
+//            performDragAndDrop(notAcceptableSource, getAcceptTarget());
+//        } catch (Exception e) {
+//            JSExecutorUtils.dragAndDropJS(driver, notAcceptableSource, getAcceptTarget());
+//        }
+//    }
+//
+//    public void dragAcceptableBox() {
+//        try {
+//            performDragAndDrop(acceptableSource, getAcceptTarget());
+//        } catch (Exception e) {
+//            JSExecutorUtils.dragAndDropJS(driver, acceptableSource, getAcceptTarget());
+//        }
+//    }
+//
+//    public String getAcceptTargetText() {
+//        return getAcceptTarget().getText();
+//    }
+//
+//    public void clickPreventTab() {
+//        clickElement(preventTab);
+//        waitForElement(preventSource);
+//    }
+//
+//    public void dragToNotGreedyInner() {
+//        performDragAndDrop(preventSource, notGreedyInner);
+//    }
+//
+//    public void dragToGreedyInner() {
+//        performDragAndDrop(preventSource, greedyInner);
+//    }
+//
+//    public String getNotGreedyInnerClass() {
+//        return notGreedyInner.getAttribute("class");
+//    }
+//
+//    public String getNotGreedyOuterClass() {
+//        return notGreedyOuter.getAttribute("class");
+//    }
+//
+//    public String getGreedyInnerClass() {
+//        return greedyInner.getAttribute("class");
+//    }
+//
+//    public String getGreedyOuterClass() {
+//        return greedyOuter.getAttribute("class");
+//    }
+//
+//    public void clickRevertTab() {
+//        clickElement(revertTab);
+//        waitForElement(willRevertSource);
+//    }
+//
+//    private WebElement getRevertTarget() {
+//        return waitForElement(driver.findElement(By.cssSelector("#revertableDropContainer #droppable")));
+//    }
+//
+//    public void dragRevertBox(boolean shouldRevert) {
+//        WebElement source = shouldRevert ? willRevertSource : notRevertSource;
+//        performDragAndDrop(source, getRevertTarget());
+//
+//        if (shouldRevert) {
+//            try { Thread.sleep(2000); } catch (InterruptedException e) {}
+//        }
+//    }
+//
+//    public Point getRevertSourceLocation() {
+//        return willRevertSource.getLocation();
+//    }
+//
+//    public Point getNotRevertSourceLocation() {
+//        return notRevertSource.getLocation();
+//    }
+//}
 package pages;
 
-import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.ExpectedConditions;
+import java.time.Duration;
 
 public class DroppablePage extends BasePage {
 
-    // -------- SIMPLE (FIXED) --------
     @FindBy(css = "#simpleDropContainer #draggable")
     private WebElement simpleSource;
 
     @FindBy(css = "#simpleDropContainer #droppable")
     private WebElement simpleTarget;
 
-    // -------- ACCEPT (FIXED) --------
     @FindBy(id = "droppableExample-tab-accept")
     private WebElement acceptTab;
 
@@ -26,7 +187,10 @@ public class DroppablePage extends BasePage {
     @FindBy(id = "notAcceptable")   
     private WebElement notAcceptableSource;
 
-    // -------- PREVENT --------
+    // Fixed dynamic locator for the accept target
+    @FindBy(css = "#acceptDropContainer #droppable")
+    private WebElement acceptTarget;
+
     @FindBy(id = "droppableExample-tab-preventPropogation")
     private WebElement preventTab;
 
@@ -45,7 +209,6 @@ public class DroppablePage extends BasePage {
     @FindBy(id = "greedyDropBox")
     private WebElement greedyOuter;
 
-    // -------- REVERT --------
     @FindBy(id = "droppableExample-tab-revertable")
     private WebElement revertTab;
 
@@ -55,89 +218,78 @@ public class DroppablePage extends BasePage {
     @FindBy(id = "notRevertable")
     private WebElement notRevertSource;
 
+    // Fixed dynamic locator for the revert target
+    @FindBy(css = "#revertableDropContainer #droppable")
+    private WebElement revertTarget;
+
     public DroppablePage(WebDriver driver) {
         super(driver);
     }
 
-    // ✅ NAVIGATION
     public void navigateToDroppablePage() {
         driver.get("https://demoqa.com/droppable");
-        
-        driver.navigate().refresh();
         disableTextSelection();
     }
 
-    // -------- SIMPLE --------
+    /**
+     * Custom, bulletproof Drag and Drop specifically tuned for DemoQA
+     */
+    private void executeReliableDragAndDrop(WebElement source, WebElement target) {
+        // 1. Force the target to the dead-center of the screen. 
+        // This guarantees it is NOT hidden under the sticky footer ad or top header.
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({block: 'center'});", target);
+        
+        try { Thread.sleep(500); } catch (Exception e) {} // Wait for scroll to settle
+
+        // 2. Perform slow, deliberate actions so React/jQuery registers the event listeners
+        Actions actions = new Actions(driver);
+        actions.moveToElement(source)
+               .pause(Duration.ofMillis(200))
+               .clickAndHold(source)
+               .pause(Duration.ofMillis(200))
+               .moveToElement(target)
+               .pause(Duration.ofMillis(200))
+               .release(target)
+               .build()
+               .perform();
+    }
+
     public void dragSimpleBox() {
-        try {
-            dragAndDrop(simpleSource, simpleTarget);
-        } catch (Exception e) {
-            dragAndDropJS(simpleSource, simpleTarget); // ✅ fallback
-        }
+        executeReliableDragAndDrop(simpleSource, simpleTarget);
     }
 
     public String getSimpleTargetText() {
-        return simpleTarget.getText();
+        return waitForElement(simpleTarget).getText();
     }
-
 
     public void clickAcceptTab() {
         clickElement(acceptTab);
-
-        wait.until(ExpectedConditions.visibilityOfElementLocated(
-                By.id("acceptDropContainer")
-        ));
-
-        wait.until(ExpectedConditions.visibilityOfElementLocated(
-                By.cssSelector("#acceptDropContainer #droppable")
-        ));
-
-        // ADD THIS (important for React UI)
-        try {
-            Thread.sleep(500);
-        } catch (Exception e) {}
-    }
-
-    // ✅ always fetch latest element
-    private WebElement getAcceptTarget() {
-        return wait.until(ExpectedConditions.visibilityOfElementLocated(
-                By.cssSelector("#acceptDropContainer #droppable")
-        ));
+        waitForElement(acceptTarget);
     }
 
     public void dragNotAcceptableBox() {
-        try {
-            dragAndDrop(notAcceptableSource, getAcceptTarget());
-        } catch (Exception e) {
-            dragAndDropJS(notAcceptableSource, getAcceptTarget());
-        }
+        executeReliableDragAndDrop(notAcceptableSource, acceptTarget);
     }
 
     public void dragAcceptableBox() {
-        try {
-            dragAndDrop(acceptableSource, getAcceptTarget());
-        } catch (Exception e) {
-            dragAndDropJS(acceptableSource, getAcceptTarget());
-        }
+        executeReliableDragAndDrop(acceptableSource, acceptTarget);
     }
 
     public String getAcceptTargetText() {
-        return getAcceptTarget().getText();
+        return waitForElement(acceptTarget).getText();
     }
 
-    // -------- PREVENT --------
     public void clickPreventTab() {
         clickElement(preventTab);
-        waitForVisibility(preventSource);
+        waitForElement(preventSource);
     }
 
     public void dragToNotGreedyInner() {
-        dragAndDrop(preventSource, notGreedyInner);
+        executeReliableDragAndDrop(preventSource, notGreedyInner);
     }
-    
 
     public void dragToGreedyInner() {
-        dragAndDrop(preventSource, greedyInner);
+        executeReliableDragAndDrop(preventSource, greedyInner);
     }
 
     public String getNotGreedyInnerClass() {
@@ -147,7 +299,6 @@ public class DroppablePage extends BasePage {
     public String getNotGreedyOuterClass() {
         return notGreedyOuter.getAttribute("class");
     }
-    
 
     public String getGreedyInnerClass() {
         return greedyInner.getAttribute("class");
@@ -157,33 +308,25 @@ public class DroppablePage extends BasePage {
         return greedyOuter.getAttribute("class");
     }
 
-    // -------- REVERT --------
     public void clickRevertTab() {
         clickElement(revertTab);
-        waitForVisibility(willRevertSource);
-    }
-
-    private WebElement getRevertTarget() {
-        return wait.until(ExpectedConditions.visibilityOfElementLocated(
-                By.cssSelector("#revertableDropContainer #droppable")
-        ));
+        waitForElement(willRevertSource);
     }
 
     public void dragRevertBox(boolean shouldRevert) {
         WebElement source = shouldRevert ? willRevertSource : notRevertSource;
-
-        dragAndDrop(source, getRevertTarget());
+        executeReliableDragAndDrop(source, revertTarget);
 
         if (shouldRevert) {
-            try { Thread.sleep(2000); } catch (InterruptedException e) {}
+            // Wait for the DemoQA visual animation to finish snapping back
+            try { Thread.sleep(1500); } catch (InterruptedException e) {}
         }
     }
 
     public Point getRevertSourceLocation() {
-        return willRevertSource.getLocation();
+        return waitForElement(willRevertSource).getLocation();
     }
-
     public Point getNotRevertSourceLocation() {
-        return notRevertSource.getLocation();
+        return waitForElement(notRevertSource).getLocation();
     }
 }

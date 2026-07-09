@@ -2,7 +2,10 @@ package pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
+
+import com.automation.utils.ui.WebActions;
 
 import java.time.Duration;
 import java.util.List;
@@ -44,7 +47,7 @@ public class SortablePage extends BasePage {
 
     private void sortRandom(List<WebElement> elements) {
 
-        List<WebElement> visibleElements = waitForAllVisible(elements);
+        List<WebElement> visibleElements = WebActions.waitForAllVisible(driver, elements, 15);
         Random random = new Random();
 
         int sourceIndex = random.nextInt(visibleElements.size());
@@ -57,20 +60,15 @@ public class SortablePage extends BasePage {
         WebElement source = visibleElements.get(sourceIndex);
         WebElement target = visibleElements.get(targetIndex);
 
-        scrollIntoViewCenter(target);
-
-        // ✅ IMPORTANT: get size of target
         int height = target.getSize().getHeight();
-
-        // ✅ choose direction (top or bottom)
         int yOffset = (random.nextBoolean()) ? -height/2 : height/2;
 
+        Actions actions = new Actions(driver);
         actions.clickAndHold(source)
                 .pause(Duration.ofMillis(500))
-                .moveToElement(target, 0, yOffset)  // ✅ move ABOVE or BELOW center
-                .pause(Duration.ofMillis(700))      // wait for UI detection
+                .moveToElement(target, 0, yOffset)  
+                .pause(Duration.ofMillis(700))      
                 .release()
                 .perform();
     }
-    
 }

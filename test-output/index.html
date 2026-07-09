@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite" class="navigator-link">
-              <span class="suite-name border-failed">Suite</span>
+              <span class="suite-name border-skipped">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Suite" class="navigator-link ">
-                    <span>C:\Users\2457272\eclipse-workspace\QA_Project\testng.xml</span>
+                    <span>C:\Users\2457272\eclipse-workspace\QA_Project_2_Flex\testng.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,21 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">13 methods, 1 failed,  2 skipped,  10 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
-                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
-                    </span>
-                    <div class="method-list-content failed suite-Suite">
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="tests.ResizableTest" class="method navigator-link" hash-for-method="testResizableBoxWithoutRestriction">testResizableBoxWithoutRestriction</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-Suite -->
+                    <span class="method-stats">14 methods,  1 skipped,  13 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title skipped">Retried methods</span>
@@ -117,12 +103,7 @@
                     <div class="method-list-content skipped suite-Suite">
                       <span>
                         <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="tests.ResizableTest" class="method navigator-link" hash-for-method="testResizableBoxWithoutRestriction">testResizableBoxWithoutRestriction</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="tests.ResizableTest" class="method navigator-link" hash-for-method="testResizableBoxWithoutRestriction">testResizableBoxWithoutRestriction</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="tests.DraggableTest" class="method navigator-link" hash-for-method="testAxisRestrictedDraggable">testAxisRestrictedDraggable</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content skipped suite-Suite -->
@@ -151,7 +132,17 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="tests.DroppableTests" class="method navigator-link" hash-for-method="testPreventPropagationDroppable">testPreventPropagationDroppable</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="tests.ResizableTest" class="method navigator-link" hash-for-method="testResizableBoxWithRestriction">testResizableBoxWithRestriction</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="tests.ResizableTest" class="method navigator-link" hash-for-method="testResizableBoxWithoutRestriction">testResizableBoxWithoutRestriction</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -167,6 +158,11 @@
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="tests.SelectableTest" class="method navigator-link" hash-for-method="testSelectableList">testSelectableList</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="tests.DroppableTests" class="method navigator-link" hash-for-method="testSimpleDragAndDrop">testSimpleDragAndDrop</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -196,97 +192,30 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">tests.ResizableTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="testResizableBoxWithoutRestriction">
-                  </a> <!-- testResizableBoxWithoutRestriction -->
-                  <span class="method-name">testResizableBoxWithoutRestriction</span>
-                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for pages.ResizablePage$$Lambda/0x000001de012b3b18@1c3259fa (tried for 20 second(s) with 500 milliseconds interval)
-Build info: version: &apos;4.38.0&apos;, revision: &apos;6b412e825c*&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21&apos;
-Driver info: org.openqa.selenium.edge.EdgeDriver
-Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 150.0.4078.48, fedcm:accounts: true, goog:processID: 29220, ms:edgeOptions: {debuggerAddress: localhost:60724}, msedge: {msedgedriverVersion: 150.0.4078.48 (6362dfa84aa4..., userDataDir: C:\Users\2457272\AppData\Lo...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60724/devtoo..., se:cdpVersion: 150.0.4078.48, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 7825bdb911fe1854fd43547a5c9c5e3e
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at pages.ResizablePage.resizeUnrestrictedBox(ResizablePage.java:99)
-	at tests.ResizableTest.testResizableBoxWithoutRestriction(ResizableTest.java:32)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 25 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-failed -->
           <div class="suite-Suite-class-skipped">
             <div class="main-panel-header rounded-window-top">
               <img src="skipped.png"/>
-              <span class="class-name">tests.ResizableTest</span>
+              <span class="class-name">tests.DraggableTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="testResizableBoxWithoutRestriction">
-                  </a> <!-- testResizableBoxWithoutRestriction -->
-                  <span class="method-name">testResizableBoxWithoutRestriction</span>
-                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for pages.ResizablePage$$Lambda/0x000001de012b3b18@597f0937 (tried for 20 second(s) with 500 milliseconds interval)
-Build info: version: &apos;4.38.0&apos;, revision: &apos;6b412e825c*&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21&apos;
-Driver info: org.openqa.selenium.edge.EdgeDriver
-Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 150.0.4078.48, fedcm:accounts: true, goog:processID: 10360, ms:edgeOptions: {debuggerAddress: localhost:58664}, msedge: {msedgedriverVersion: 150.0.4078.48 (6362dfa84aa4..., userDataDir: C:\Users\2457272\AppData\Lo...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58664/devtoo..., se:cdpVersion: 150.0.4078.48, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: d73897383c2191a601ddb278eaeb6d3a
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at pages.ResizablePage.resizeUnrestrictedBox(ResizablePage.java:99)
-	at tests.ResizableTest.testResizableBoxWithoutRestriction(ResizableTest.java:32)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 25 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="testResizableBoxWithoutRestriction">
-                  </a> <!-- testResizableBoxWithoutRestriction -->
-                  <span class="method-name">testResizableBoxWithoutRestriction</span>
-                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for pages.ResizablePage$$Lambda/0x000001de012b3b18@1442f788 (tried for 20 second(s) with 500 milliseconds interval)
-Build info: version: &apos;4.38.0&apos;, revision: &apos;6b412e825c*&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21&apos;
-Driver info: org.openqa.selenium.edge.EdgeDriver
-Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 150.0.4078.48, fedcm:accounts: true, goog:processID: 28072, ms:edgeOptions: {debuggerAddress: localhost:51245}, msedge: {msedgedriverVersion: 150.0.4078.48 (6362dfa84aa4..., userDataDir: C:\Users\2457272\AppData\Lo...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51245/devtoo..., se:cdpVersion: 150.0.4078.48, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: d1a51820d8a614c4b347568333a96565
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at pages.ResizablePage.resizeUnrestrictedBox(ResizablePage.java:99)
-	at tests.ResizableTest.testResizableBoxWithoutRestriction(ResizableTest.java:32)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 25 stack frames
+                  <a name="testAxisRestrictedDraggable">
+                  </a> <!-- testAxisRestrictedDraggable -->
+                  <span class="method-name">testAxisRestrictedDraggable</span>
+                  <div class="stack-trace">java.lang.AssertionError: Only X box did not move horizontally! expected [true] but found [false]
+	at tests.DraggableTest.testAxisRestrictedDraggable(DraggableTest.java:38)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 14 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Suite-class-skipped -->
-          <div class="suite-Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">tests.DroppableTests</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="testRevertDraggable">
-                  </a> <!-- testRevertDraggable -->
-                  <span class="method-name">testRevertDraggable</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -298,6 +227,8 @@ Session ID: d1a51820d8a614c4b347568333a96565
                   <a name="testSelectableGrid">
                   </a> <!-- testSelectableGrid -->
                   <span class="method-name">testSelectableGrid</span>
+                  <em>
+(Verify random selection of elements in a Grid format)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -305,6 +236,43 @@ Session ID: d1a51820d8a614c4b347568333a96565
                   <a name="testSelectableList">
                   </a> <!-- testSelectableList -->
                   <span class="method-name">testSelectableList</span>
+                  <em>
+(Verify random selection of elements in a vertical List format)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">tests.DroppableTests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testPreventPropagationDroppable">
+                  </a> <!-- testPreventPropagationDroppable -->
+                  <span class="method-name">testPreventPropagationDroppable</span>
+                  <em>
+(Verify Prevent Propagation behavior on nested drop boxes)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testRevertDraggable">
+                  </a> <!-- testRevertDraggable -->
+                  <span class="method-name">testRevertDraggable</span>
+                  <em>
+(Verify Revertible Drag and Drop behavior for both reverting and non-reverting boxes)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testSimpleDragAndDrop">
+                  </a> <!-- testSimpleDragAndDrop -->
+                  <span class="method-name">testSimpleDragAndDrop</span>
+                  <em>
+(Verify Simple Drag and Drop functionality)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -320,6 +288,17 @@ Session ID: d1a51820d8a614c4b347568333a96565
                   <a name="testResizableBoxWithRestriction">
                   </a> <!-- testResizableBoxWithRestriction -->
                   <span class="method-name">testResizableBoxWithRestriction</span>
+                  <em>
+(Verify resizing of a box with max/min constraints)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testResizableBoxWithoutRestriction">
+                  </a> <!-- testResizableBoxWithoutRestriction -->
+                  <span class="method-name">testResizableBoxWithoutRestriction</span>
+                  <em>
+(Verify free resizing of an unrestricted box)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -371,6 +350,8 @@ Session ID: d1a51820d8a614c4b347568333a96565
                   <a name="testSortableGrid">
                   </a> <!-- testSortableGrid -->
                   <span class="method-name">testSortableGrid</span>
+                  <em>
+(Verify drag-and-drop sorting in a Grid view)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -378,6 +359,8 @@ Session ID: d1a51820d8a614c4b347568333a96565
                   <a name="testSortableList">
                   </a> <!-- testSortableList -->
                   <span class="method-name">testSortableList</span>
+                  <em>
+(Verify drag-and-drop sorting in a List view)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -385,18 +368,18 @@ Session ID: d1a51820d8a614c4b347568333a96565
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\2457272\eclipse-workspace\QA_Project\testng.xml</span>
+            <span class="header-content">C:\Users\2457272\eclipse-workspace\QA_Project_2_Flex\testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
+&lt;suite parallel=&quot;classes&quot; name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;listeners&gt;
     &lt;listener class-name=&quot;testUtils.AnnotationTransformer&quot;/&gt;
     &lt;listener class-name=&quot;testUtils.ExtentTestListener&quot;/&gt;
   &lt;/listeners&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; parallel=&quot;classes&quot; name=&quot;E2E UI Tests&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;tests.SelectableTest&quot;/&gt;
       &lt;class name=&quot;tests.DroppableTests&quot;/&gt;
@@ -404,7 +387,7 @@ Session ID: d1a51820d8a614c4b347568333a96565
       &lt;class name=&quot;tests.DraggableTest&quot;/&gt;
       &lt;class name=&quot;tests.SortableTest&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Test --&gt;
+  &lt;/test&gt; &lt;!-- E2E UI Tests --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -416,7 +399,7 @@ Session ID: d1a51820d8a614c4b347568333a96565
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Test (5 classes)</span>
+                <span class="test-name">E2E UI Tests (5 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -442,64 +425,68 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(13);
+data.addRows(14);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'testResizableBoxWithoutRestriction')
-data.setCell(0, 2, 'tests.ResizableTest')
-data.setCell(0, 3, 24633);
+data.setCell(0, 1, 'testContainerRestrictedElegant')
+data.setCell(0, 2, 'tests.DraggableTest')
+data.setCell(0, 3, 12180);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'testResizableBoxWithoutRestriction')
-data.setCell(1, 2, 'tests.ResizableTest')
-data.setCell(1, 3, 24434);
+data.setCell(1, 1, 'testCursorStyleDraggable')
+data.setCell(1, 2, 'tests.DraggableTest')
+data.setCell(1, 3, 11333);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'testResizableBoxWithoutRestriction')
-data.setCell(2, 2, 'tests.ResizableTest')
-data.setCell(2, 3, 24056);
+data.setCell(2, 1, 'testPreventPropagationDroppable')
+data.setCell(2, 2, 'tests.DroppableTests')
+data.setCell(2, 3, 10492);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'testContainerRestrictedElegant')
-data.setCell(3, 2, 'tests.DraggableTest')
-data.setCell(3, 3, 12657);
+data.setCell(3, 1, 'testRevertDraggable')
+data.setCell(3, 2, 'tests.DroppableTests')
+data.setCell(3, 3, 7749);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'testRevertDraggable')
-data.setCell(4, 2, 'tests.DroppableTests')
-data.setCell(4, 3, 11434);
+data.setCell(4, 1, 'testAxisRestrictedDraggable')
+data.setCell(4, 2, 'tests.DraggableTest')
+data.setCell(4, 3, 7218);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'testCursorStyleDraggable')
-data.setCell(5, 2, 'tests.DraggableTest')
-data.setCell(5, 3, 10443);
+data.setCell(5, 1, 'testSortableGrid')
+data.setCell(5, 2, 'tests.SortableTest')
+data.setCell(5, 3, 6745);
 data.setCell(6, 0, 6)
 data.setCell(6, 1, 'testAxisRestrictedDraggable')
 data.setCell(6, 2, 'tests.DraggableTest')
-data.setCell(6, 3, 6212);
+data.setCell(6, 3, 6654);
 data.setCell(7, 0, 7)
 data.setCell(7, 1, 'testSortableList')
 data.setCell(7, 2, 'tests.SortableTest')
-data.setCell(7, 3, 4639);
+data.setCell(7, 3, 6437);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'testSimpleDraggable')
-data.setCell(8, 2, 'tests.DraggableTest')
-data.setCell(8, 3, 4621);
+data.setCell(8, 1, 'testSimpleDragAndDrop')
+data.setCell(8, 2, 'tests.DroppableTests')
+data.setCell(8, 3, 6030);
 data.setCell(9, 0, 9)
-data.setCell(9, 1, 'testSortableGrid')
-data.setCell(9, 2, 'tests.SortableTest')
-data.setCell(9, 3, 4486);
+data.setCell(9, 1, 'testResizableBoxWithoutRestriction')
+data.setCell(9, 2, 'tests.ResizableTest')
+data.setCell(9, 3, 5590);
 data.setCell(10, 0, 10)
 data.setCell(10, 1, 'testResizableBoxWithRestriction')
 data.setCell(10, 2, 'tests.ResizableTest')
-data.setCell(10, 3, 4230);
+data.setCell(10, 3, 5472);
 data.setCell(11, 0, 11)
-data.setCell(11, 1, 'testSelectableList')
-data.setCell(11, 2, 'tests.SelectableTest')
-data.setCell(11, 3, 4177);
+data.setCell(11, 1, 'testSimpleDraggable')
+data.setCell(11, 2, 'tests.DraggableTest')
+data.setCell(11, 3, 5265);
 data.setCell(12, 0, 12)
-data.setCell(12, 1, 'testSelectableGrid')
+data.setCell(12, 1, 'testSelectableList')
 data.setCell(12, 2, 'tests.SelectableTest')
-data.setCell(12, 3, 3869);
+data.setCell(12, 3, 4674);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'testSelectableGrid')
+data.setCell(13, 2, 'tests.SelectableTest')
+data.setCell(13, 3, 4254);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 minutes</span>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -525,176 +512,276 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">tests.SelectableTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">tests.SortableTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">testSelectableList</span>
-                <span class="method-start">10176 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">14377 ms</span>
-              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.DraggableTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">30418 ms</span>
+                <span class="method-start">1 ms</span>
               </div> <!-- configuration-method before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.SelectableTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">1 ms</span>
+              </div> <!-- configuration-method before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.ResizableTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">1 ms</span>
+              </div> <!-- configuration-method before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.DroppableTests</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">1 ms</span>
+              </div> <!-- configuration-method before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.DraggableTest</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">testSelectableGrid</span>
-                <span class="method-start">34420 ms</span>
+                <span class="method-name">testSimpleDraggable</span>
+                <span class="method-start">13920 ms</span>
               </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.ResizableTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">testResizableBoxWithRestriction</span>
+                <span class="method-start">14025 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.DroppableTests</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">testSimpleDragAndDrop</span>
+                <span class="method-start">14566 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.SelectableTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">testSelectableList</span>
+                <span class="method-start">15027 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.SortableTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">testSortableList</span>
+                <span class="method-start">15131 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.DraggableTest</div> <!-- chronological-class-name -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">38289 ms</span>
+                <span class="method-start">19197 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.ResizableTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">19499 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.SelectableTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">19704 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.DroppableTests</div> <!-- chronological-class-name -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">20598 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.SortableTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">21570 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tests.DroppableTests</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">46584 ms</span>
+                <span class="method-start">37637 ms</span>
               </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">testRevertDraggable</span>
-                <span class="method-start">50223 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">61671 ms</span>
-              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.SortableTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">37637 ms</span>
+              </div> <!-- configuration-method before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.DraggableTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">37638 ms</span>
+              </div> <!-- configuration-method before -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tests.ResizableTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">70227 ms</span>
+                <span class="method-start">40054 ms</span>
               </div> <!-- configuration-method before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.DraggableTest</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">testResizableBoxWithRestriction</span>
-                <span class="method-start">73973 ms</span>
+                <span class="method-name">testAxisRestrictedDraggable</span>
+                <span class="method-start">46255 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">78204 ms</span>
-              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.SelectableTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">85995 ms</span>
+                <span class="method-start">48635 ms</span>
               </div> <!-- configuration-method before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.DroppableTests</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">testPreventPropagationDroppable</span>
+                <span class="method-start">48830 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.SortableTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">testSortableGrid</span>
+                <span class="method-start">50303 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.ResizableTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">testResizableBoxWithoutRestriction</span>
-                <span class="method-start">89632 ms</span>
+                <span class="method-start">52846 ms</span>
               </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.DraggableTest</div> <!-- chronological-class-name -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">113705 ms</span>
+                <span class="method-start">53488 ms</span>
               </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">setUp</span>
-                <span class="method-start">125391 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">testResizableBoxWithoutRestriction</span>
-                <span class="method-start">129173 ms</span>
-              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.SortableTest</div> <!-- chronological-class-name -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">153806 ms</span>
+                <span class="method-start">57051 ms</span>
               </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">setUp</span>
-                <span class="method-start">165095 ms</span>
-              </div> <!-- configuration-method before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.SelectableTest</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">testResizableBoxWithoutRestriction</span>
-                <span class="method-start">168254 ms</span>
+                <span class="method-name">testSelectableGrid</span>
+                <span class="method-start">57657 ms</span>
               </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.ResizableTest</div> <!-- chronological-class-name -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">192919 ms</span>
+                <span class="method-start">58437 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.DroppableTests</div> <!-- chronological-class-name -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">59323 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.SelectableTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">61913 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tests.DraggableTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">204981 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">testSimpleDraggable</span>
-                <span class="method-start">208395 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">213016 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">setUp</span>
-                <span class="method-start">217317 ms</span>
+                <span class="method-start">84757 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testAxisRestrictedDraggable</span>
-                <span class="method-start">220605 ms</span>
+                <span class="method-start">88624 ms</span>
               </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.DroppableTests</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">90609 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testRevertDraggable</span>
+                <span class="method-start">94333 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.DraggableTest</div> <!-- chronological-class-name -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">226826 ms</span>
+                <span class="method-start">95280 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">232057 ms</span>
+                <span class="method-start">101508 ms</span>
               </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">testCursorStyleDraggable</span>
-                <span class="method-start">235648 ms</span>
-              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.DroppableTests</div> <!-- chronological-class-name -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">246093 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">setUp</span>
-                <span class="method-start">252046 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">testContainerRestrictedElegant</span>
-                <span class="method-start">255462 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">268120 ms</span>
+                <span class="method-start">102082 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
-              <div class="chronological-class-name">tests.SortableTest</div> <!-- chronological-class-name -->
-              <div class="configuration-method before">
-                <span class="method-name">setUp</span>
-                <span class="method-start">274488 ms</span>
-              </div> <!-- configuration-method before -->
+              <div class="chronological-class-name">tests.DraggableTest</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">testSortableList</span>
-                <span class="method-start">278086 ms</span>
+                <span class="method-name">testCursorStyleDraggable</span>
+                <span class="method-start">104881 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">282728 ms</span>
+                <span class="method-start">116214 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">288616 ms</span>
+                <span class="method-start">122777 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">testSortableGrid</span>
-                <span class="method-start">292165 ms</span>
+                <span class="method-name">testContainerRestrictedElegant</span>
+                <span class="method-start">126631 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">296655 ms</span>
+                <span class="method-start">138819 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

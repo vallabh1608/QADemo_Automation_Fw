@@ -4,6 +4,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import com.automation.utils.ui.WebActions;
+
 import java.util.HashSet;
 import java.util.List;
 import java.util.Random;
@@ -44,7 +46,8 @@ public class SelectablePage extends BasePage {
     }
 
     private Set<WebElement> selectRandom(List<WebElement> elements, int count) {
-        List<WebElement> visibleElements = waitForAllVisible(elements);
+        // Fetch visible list using JAR utility
+        List<WebElement> visibleElements = WebActions.waitForAllVisible(driver, elements, 15);
         Random random = new Random();
         Set<Integer> randomIndices = new HashSet<>();
         Set<WebElement> selectedElements = new HashSet<>();
@@ -55,8 +58,7 @@ public class SelectablePage extends BasePage {
         
         for(int index : randomIndices) {
             WebElement item = visibleElements.get(index);
-            scrollIntoViewCenter(item);
-            item.click();
+            clickElement(item); // Uses the stable click wrapper
             selectedElements.add(item);
         }
         return selectedElements;

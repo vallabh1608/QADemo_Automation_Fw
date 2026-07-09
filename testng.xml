@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 
-<suite name="Suite" thread-count="5">
+<suite name="Suite" parallel="classes" thread-count="5">
 
   <listeners>
     <listener class-name="testUtils.AnnotationTransformer"/>
     <listener class-name="testUtils.ExtentTestListener"/>
   </listeners>
 
-  <test name="Test">
+  <test name="E2E UI Tests">
     <classes>
       <class name="tests.SelectableTest"/>
       <class name="tests.DroppableTests"/>

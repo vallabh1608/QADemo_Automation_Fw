@@ -7,7 +7,7 @@
         <methods>
           <include name="setUp"/>
           <include name="tearDown"/>
-          <include name="preventPropagationDroppable"/>
+          <include name="testAcceptableDragAndDrop"/>
         </methods>
       </class> <!-- tests.DroppableTests -->
     </classes>

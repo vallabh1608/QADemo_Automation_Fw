@@ -1,24 +1,28 @@
 package testUtils;
 
-import java.io.FileInputStream;
-import java.io.IOException;
 import java.util.Properties;
 
-public class ConfigReader {
-    private static Properties properties;
+// Importing from your custom JAR
+import com.automation.utils.config.PropertiesLoader;
 
-    static {
-        try {
-            FileInputStream file = new FileInputStream("src/test/resources/config.properties");
-            properties = new Properties();
-            properties.load(file);
-        } catch (IOException e) {
-            e.printStackTrace();
-            throw new RuntimeException("Could not load config.properties file.");
-        }
+public class ConfigReader {
+
+    private static Properties properties;
+    private static final String CONFIG_PATH = "src/test/resources/config.properties";
+
+    /**
+     * Loads properties using the reusable JAR utility
+     */
+    public static void initializeProperties() {
+        // We pass the path to the JAR's utility method
+        properties = PropertiesLoader.loadProperties(CONFIG_PATH);
     }
 
     public static String getProperty(String key) {
-        return properties.getProperty(key);
+        if (properties == null) {
+            initializeProperties();
+        }
+        // Using the helper method from the JAR to handle missing keys gracefully
+        return PropertiesLoader.getPropertyWithDefault(properties, key, "Property not found");
     }
 }

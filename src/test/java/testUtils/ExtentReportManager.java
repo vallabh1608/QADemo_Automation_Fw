@@ -4,18 +4,17 @@ import com.aventstack.extentreports.*;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
-public class ExtentReportManger {
+public class ExtentReportManager {
 
     private static ExtentReports extent;
     private static ThreadLocal<ExtentTest> test = new ThreadLocal<>();
 
-    // ✅ Create report
-    public static ExtentReports getInstance() {
+    // ✅ Added 'synchronized' to prevent parallel test corruption
+    public static synchronized ExtentReports getInstance() {
         if (extent == null) {
             String reportPath = System.getProperty("user.dir") + "/test-output/ExtentReport.html";
 
             ExtentSparkReporter sparkReporter = new ExtentSparkReporter(reportPath);
-
             sparkReporter.config().setTheme(Theme.DARK);
             sparkReporter.config().setDocumentTitle("Automation Test Report");
             sparkReporter.config().setReportName("DemoQA E2E Framework Execution");
@@ -29,21 +28,19 @@ public class ExtentReportManger {
         return extent;
     }
 
-    // ✅ Start test
     public static synchronized void startTest(String testName) {
         ExtentTest extentTest = getInstance().createTest(testName);
         test.set(extentTest);
     }
 
-    // ✅ Get current test (thread-safe)
     public static ExtentTest getTest() {
         return test.get();
     }
 
-    // ✅ Flush report
     public static void flushReport() {
         if (extent != null) {
             extent.flush();
         }
+        test.remove(); // ✅ CRITICAL: Clears the ThreadLocal to prevent memory leaks
     }
 }
