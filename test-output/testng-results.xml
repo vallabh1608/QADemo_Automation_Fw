@@ -1,28 +1,99 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="1" total="2" passed="0" failed="1" skipped="0">
+<testng-results retried="2" ignored="0" total="13" passed="10" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-06-19T11:06:48 IST" name="Default suite" finished-at="2026-06-19T11:07:04 IST" duration-ms="16144">
+  <suite started-at="2026-07-07T13:06:23 IST" name="Suite" finished-at="2026-07-07T13:11:26 IST" duration-ms="302779">
     <groups>
     </groups>
-    <test started-at="2026-06-19T11:06:48 IST" name="Default test" finished-at="2026-06-19T11:07:04 IST" duration-ms="16144">
-      <class name="tests.DroppableTests">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.DroppableTests@55182842]" started-at="2026-06-19T11:06:48 IST" name="setUp" finished-at="2026-06-19T11:06:52 IST" duration-ms="3328" status="PASS">
+    <test started-at="2026-07-07T13:06:23 IST" name="Test" finished-at="2026-07-07T13:11:26 IST" duration-ms="302779">
+      <class name="tests.DraggableTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.DraggableTest@2f4948e4]" started-at="2026-07-07T13:09:48 IST" name="setUp" finished-at="2026-07-07T13:09:52 IST" duration-ms="3414" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="preventPropagationDroppable()[pri:1, instance:tests.DroppableTests@55182842]" started-at="2026-06-19T11:06:52 IST" name="preventPropagationDroppable" finished-at="2026-06-19T11:06:58 IST" duration-ms="6729" status="FAIL">
-          <exception class="java.lang.AssertionError">
+        <test-method signature="testSimpleDraggable()[pri:1, instance:tests.DraggableTest@2f4948e4]" started-at="2026-07-07T13:09:52 IST" name="testSimpleDraggable" finished-at="2026-07-07T13:09:56 IST" duration-ms="4621" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSimpleDraggable -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.DraggableTest@2f4948e4]" started-at="2026-07-07T13:09:56 IST" name="tearDown" finished-at="2026-07-07T13:10:01 IST" duration-ms="4299" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.DraggableTest@2f4948e4]" started-at="2026-07-07T13:10:01 IST" name="setUp" finished-at="2026-07-07T13:10:04 IST" duration-ms="3288" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testAxisRestrictedDraggable()[pri:2, instance:tests.DraggableTest@2f4948e4]" started-at="2026-07-07T13:10:04 IST" name="testAxisRestrictedDraggable" finished-at="2026-07-07T13:10:10 IST" duration-ms="6212" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAxisRestrictedDraggable -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.DraggableTest@2f4948e4]" started-at="2026-07-07T13:10:10 IST" name="tearDown" finished-at="2026-07-07T13:10:15 IST" duration-ms="5229" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.DraggableTest@2f4948e4]" started-at="2026-07-07T13:10:15 IST" name="setUp" finished-at="2026-07-07T13:10:19 IST" duration-ms="3591" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testCursorStyleDraggable()[pri:3, instance:tests.DraggableTest@2f4948e4]" started-at="2026-07-07T13:10:19 IST" name="testCursorStyleDraggable" finished-at="2026-07-07T13:10:29 IST" duration-ms="10443" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCursorStyleDraggable -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.DraggableTest@2f4948e4]" started-at="2026-07-07T13:10:29 IST" name="tearDown" finished-at="2026-07-07T13:10:35 IST" duration-ms="5952" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.DraggableTest@2f4948e4]" started-at="2026-07-07T13:10:35 IST" name="setUp" finished-at="2026-07-07T13:10:39 IST" duration-ms="3416" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testContainerRestrictedElegant()[pri:4, instance:tests.DraggableTest@2f4948e4]" started-at="2026-07-07T13:10:39 IST" name="testContainerRestrictedElegant" finished-at="2026-07-07T13:10:51 IST" duration-ms="12657" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testContainerRestrictedElegant -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.DraggableTest@2f4948e4]" started-at="2026-07-07T13:10:51 IST" name="tearDown" finished-at="2026-07-07T13:10:58 IST" duration-ms="6367" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.DraggableTest -->
+      <class name="tests.ResizableTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.ResizableTest@6a78afa0]" started-at="2026-07-07T13:07:33 IST" name="setUp" finished-at="2026-07-07T13:07:37 IST" duration-ms="3743" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testResizableBoxWithRestriction()[pri:1, instance:tests.ResizableTest@6a78afa0]" started-at="2026-07-07T13:07:37 IST" name="testResizableBoxWithRestriction" finished-at="2026-07-07T13:07:41 IST" duration-ms="4230" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testResizableBoxWithRestriction -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.ResizableTest@6a78afa0]" started-at="2026-07-07T13:07:41 IST" name="tearDown" finished-at="2026-07-07T13:07:49 IST" duration-ms="7789" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.ResizableTest@6a78afa0]" started-at="2026-07-07T13:07:49 IST" name="setUp" finished-at="2026-07-07T13:07:53 IST" duration-ms="3637" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method retried="true" signature="testResizableBoxWithoutRestriction()[pri:2, instance:tests.ResizableTest@6a78afa0]" started-at="2026-07-07T13:07:53 IST" name="testResizableBoxWithoutRestriction" finished-at="2026-07-07T13:08:17 IST" duration-ms="24056" status="SKIP">
+          <exception class="org.openqa.selenium.TimeoutException">
             <message>
-              <![CDATA[expected [true] but found [false]]]>
+              <![CDATA[Expected condition failed: waiting for pages.ResizablePage$$Lambda/0x000001de012b3b18@1442f788 (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: '4.38.0', revision: '6b412e825c*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 150.0.4078.48, fedcm:accounts: true, goog:processID: 28072, ms:edgeOptions: {debuggerAddress: localhost:51245}, msedge: {msedgedriverVersion: 150.0.4078.48 (6362dfa84aa4..., userDataDir: C:\Users\2457272\AppData\Lo...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51245/devtoo..., se:cdpVersion: 150.0.4078.48, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: d1a51820d8a614c4b347568333a96565]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1590)
-at org.testng.Assert.assertTrue(Assert.java:57)
-at org.testng.Assert.assertTrue(Assert.java:67)
-at tests.DroppableTests.preventPropagationDroppable(DroppableTests.java:44)
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for pages.ResizablePage$$Lambda/0x000001de012b3b18@1442f788 (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: '4.38.0', revision: '6b412e825c*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 150.0.4078.48, fedcm:accounts: true, goog:processID: 28072, ms:edgeOptions: {debuggerAddress: localhost:51245}, msedge: {msedgedriverVersion: 150.0.4078.48 (6362dfa84aa4..., userDataDir: C:\Users\2457272\AppData\Lo...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51245/devtoo..., se:cdpVersion: 150.0.4078.48, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: d1a51820d8a614c4b347568333a96565
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at pages.ResizablePage.resizeUnrestrictedBox(ResizablePage.java:99)
+at tests.ResizableTest.testResizableBoxWithoutRestriction(ResizableTest.java:32)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -51,15 +122,203 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- preventPropagationDroppable -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.DroppableTests@55182842]" started-at="2026-06-19T11:06:58 IST" name="tearDown" finished-at="2026-06-19T11:07:04 IST" duration-ms="6040" status="PASS">
+        </test-method> <!-- testResizableBoxWithoutRestriction -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.ResizableTest@6a78afa0]" started-at="2026-07-07T13:08:17 IST" name="tearDown" finished-at="2026-07-07T13:08:29 IST" duration-ms="11684" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.ResizableTest@6a78afa0]" started-at="2026-07-07T13:08:29 IST" name="setUp" finished-at="2026-07-07T13:08:32 IST" duration-ms="3782" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method retried="true" signature="testResizableBoxWithoutRestriction()[pri:2, instance:tests.ResizableTest@6a78afa0]" started-at="2026-07-07T13:08:32 IST" name="testResizableBoxWithoutRestriction" finished-at="2026-07-07T13:08:57 IST" duration-ms="24633" status="SKIP">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for pages.ResizablePage$$Lambda/0x000001de012b3b18@597f0937 (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: '4.38.0', revision: '6b412e825c*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 150.0.4078.48, fedcm:accounts: true, goog:processID: 10360, ms:edgeOptions: {debuggerAddress: localhost:58664}, msedge: {msedgedriverVersion: 150.0.4078.48 (6362dfa84aa4..., userDataDir: C:\Users\2457272\AppData\Lo...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58664/devtoo..., se:cdpVersion: 150.0.4078.48, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: d73897383c2191a601ddb278eaeb6d3a]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for pages.ResizablePage$$Lambda/0x000001de012b3b18@597f0937 (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: '4.38.0', revision: '6b412e825c*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 150.0.4078.48, fedcm:accounts: true, goog:processID: 10360, ms:edgeOptions: {debuggerAddress: localhost:58664}, msedge: {msedgedriverVersion: 150.0.4078.48 (6362dfa84aa4..., userDataDir: C:\Users\2457272\AppData\Lo...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58664/devtoo..., se:cdpVersion: 150.0.4078.48, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: d73897383c2191a601ddb278eaeb6d3a
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at pages.ResizablePage.resizeUnrestrictedBox(ResizablePage.java:99)
+at tests.ResizableTest.testResizableBoxWithoutRestriction(ResizableTest.java:32)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:697)
+at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:280)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:76)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:1005)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:744)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testResizableBoxWithoutRestriction -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.ResizableTest@6a78afa0]" started-at="2026-07-07T13:08:57 IST" name="tearDown" finished-at="2026-07-07T13:09:08 IST" duration-ms="11289" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.ResizableTest@6a78afa0]" started-at="2026-07-07T13:09:08 IST" name="setUp" finished-at="2026-07-07T13:09:11 IST" duration-ms="3159" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testResizableBoxWithoutRestriction()[pri:2, instance:tests.ResizableTest@6a78afa0]" started-at="2026-07-07T13:09:11 IST" name="testResizableBoxWithoutRestriction" finished-at="2026-07-07T13:09:36 IST" duration-ms="24434" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for pages.ResizablePage$$Lambda/0x000001de012b3b18@1c3259fa (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: '4.38.0', revision: '6b412e825c*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 150.0.4078.48, fedcm:accounts: true, goog:processID: 29220, ms:edgeOptions: {debuggerAddress: localhost:60724}, msedge: {msedgedriverVersion: 150.0.4078.48 (6362dfa84aa4..., userDataDir: C:\Users\2457272\AppData\Lo...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60724/devtoo..., se:cdpVersion: 150.0.4078.48, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 7825bdb911fe1854fd43547a5c9c5e3e]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for pages.ResizablePage$$Lambda/0x000001de012b3b18@1c3259fa (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: '4.38.0', revision: '6b412e825c*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 150.0.4078.48, fedcm:accounts: true, goog:processID: 29220, ms:edgeOptions: {debuggerAddress: localhost:60724}, msedge: {msedgedriverVersion: 150.0.4078.48 (6362dfa84aa4..., userDataDir: C:\Users\2457272\AppData\Lo...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60724/devtoo..., se:cdpVersion: 150.0.4078.48, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 7825bdb911fe1854fd43547a5c9c5e3e
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at pages.ResizablePage.resizeUnrestrictedBox(ResizablePage.java:99)
+at tests.ResizableTest.testResizableBoxWithoutRestriction(ResizableTest.java:32)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:697)
+at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:280)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:76)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:1005)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:744)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testResizableBoxWithoutRestriction -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.ResizableTest@6a78afa0]" started-at="2026-07-07T13:09:36 IST" name="tearDown" finished-at="2026-07-07T13:09:48 IST" duration-ms="12061" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.ResizableTest -->
+      <class name="tests.DroppableTests">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.DroppableTests@dd05255]" started-at="2026-07-07T13:07:10 IST" name="setUp" finished-at="2026-07-07T13:07:13 IST" duration-ms="3639" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testRevertDraggable()[pri:2, instance:tests.DroppableTests@dd05255]" started-at="2026-07-07T13:07:13 IST" name="testRevertDraggable" finished-at="2026-07-07T13:07:25 IST" duration-ms="11434" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRevertDraggable -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.DroppableTests@dd05255]" started-at="2026-07-07T13:07:25 IST" name="tearDown" finished-at="2026-07-07T13:07:33 IST" duration-ms="8554" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- tests.DroppableTests -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      <class name="tests.SortableTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.SortableTest@1f2586d6]" started-at="2026-07-07T13:10:58 IST" name="setUp" finished-at="2026-07-07T13:11:01 IST" duration-ms="3598" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testSortableList()[pri:1, instance:tests.SortableTest@1f2586d6]" started-at="2026-07-07T13:11:01 IST" name="testSortableList" finished-at="2026-07-07T13:11:06 IST" duration-ms="4639" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSortableList -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.SortableTest@1f2586d6]" started-at="2026-07-07T13:11:06 IST" name="tearDown" finished-at="2026-07-07T13:11:12 IST" duration-ms="5887" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.SortableTest@1f2586d6]" started-at="2026-07-07T13:11:12 IST" name="setUp" finished-at="2026-07-07T13:11:15 IST" duration-ms="3549" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testSortableGrid()[pri:2, instance:tests.SortableTest@1f2586d6]" started-at="2026-07-07T13:11:15 IST" name="testSortableGrid" finished-at="2026-07-07T13:11:20 IST" duration-ms="4486" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSortableGrid -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.SortableTest@1f2586d6]" started-at="2026-07-07T13:11:20 IST" name="tearDown" finished-at="2026-07-07T13:11:26 IST" duration-ms="5765" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.SortableTest -->
+      <class name="tests.SelectableTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.SelectableTest@71d44a3]" started-at="2026-07-07T13:06:23 IST" name="setUp" finished-at="2026-07-07T13:06:33 IST" duration-ms="10170" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testSelectableList()[pri:1, instance:tests.SelectableTest@71d44a3]" started-at="2026-07-07T13:06:33 IST" name="testSelectableList" finished-at="2026-07-07T13:06:38 IST" duration-ms="4177" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSelectableList -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.SelectableTest@71d44a3]" started-at="2026-07-07T13:06:38 IST" name="tearDown" finished-at="2026-07-07T13:06:54 IST" duration-ms="16039" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.SelectableTest@71d44a3]" started-at="2026-07-07T13:06:54 IST" name="setUp" finished-at="2026-07-07T13:06:58 IST" duration-ms="4001" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testSelectableGrid()[pri:2, instance:tests.SelectableTest@71d44a3]" started-at="2026-07-07T13:06:58 IST" name="testSelectableGrid" finished-at="2026-07-07T13:07:01 IST" duration-ms="3869" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSelectableGrid -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.SelectableTest@71d44a3]" started-at="2026-07-07T13:07:01 IST" name="tearDown" finished-at="2026-07-07T13:07:10 IST" duration-ms="8293" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.SelectableTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

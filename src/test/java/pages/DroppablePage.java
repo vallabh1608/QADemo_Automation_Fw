@@ -9,21 +9,21 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class DroppablePage extends BasePage {
 
-    // -------- SIMPLE (✅ FIXED) --------
+    // -------- SIMPLE (FIXED) --------
     @FindBy(css = "#simpleDropContainer #draggable")
     private WebElement simpleSource;
 
     @FindBy(css = "#simpleDropContainer #droppable")
     private WebElement simpleTarget;
 
-    // -------- ACCEPT (✅ FIXED) --------
+    // -------- ACCEPT (FIXED) --------
     @FindBy(id = "droppableExample-tab-accept")
     private WebElement acceptTab;
 
     @FindBy(id = "acceptable")
     private WebElement acceptableSource;
 
-    @FindBy(id = "notAcceptable")   // ✅ replaced xpath
+    @FindBy(id = "notAcceptable")   
     private WebElement notAcceptableSource;
 
     // -------- PREVENT --------
@@ -92,7 +92,7 @@ public class DroppablePage extends BasePage {
                 By.cssSelector("#acceptDropContainer #droppable")
         ));
 
-        // ✅ ADD THIS (important for React UI)
+        // ADD THIS (important for React UI)
         try {
             Thread.sleep(500);
         } catch (Exception e) {}

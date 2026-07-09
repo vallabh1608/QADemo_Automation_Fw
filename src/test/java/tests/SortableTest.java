@@ -13,7 +13,6 @@ public class SortableTest extends BaseTest {
         sortablePage.navigateToSortablePage();
         sortablePage.clickListTab();
         
-        // The framework executes a dynamic drag and drop of random list elements
         sortablePage.sortRandomListElements();
         
         }
@@ -25,7 +24,6 @@ public class SortableTest extends BaseTest {
         sortablePage.navigateToSortablePage();
         sortablePage.clickGridTab();
         
-        // Execute dynamic drag and drop on the grid
         sortablePage.sortRandomGridElements();
     }
 }

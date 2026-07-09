@@ -7,14 +7,13 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="tests.DroppableTests">
+      <class name="tests.ResizableTest">
         <methods>
           <include name="setUp"/>
           <include name="tearDown"/>
-          <include name="preventPropagationDroppable"/>
-          <include name="simpleDragAndDrop"/>
+          <include name="testResizableBoxWithoutRestriction"/>
         </methods>
-      </class> <!-- tests.DroppableTests -->
+      </class> <!-- tests.ResizableTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

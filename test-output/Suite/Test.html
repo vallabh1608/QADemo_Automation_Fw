@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>11/2/4</td>
+<td>Tests passed/Failed/Skipped:</td><td>10/1/2</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Jun 19 11:02:19 IST 2026</td>
+<td>Started on:</td><td>Tue Jul 07 13:06:23 IST 2026</td>
 </tr>
-<tr><td>Total time:</td><td>249 seconds (249411 ms)</td>
+<tr><td>Total time:</td><td>302 seconds (302779 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,19 +76,29 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='tests.DroppableTests.simpleDragAndDrop()'><b>simpleDragAndDrop</b><br>Test class: tests.DroppableTests</td>
-<td><div><pre>java.lang.AssertionError: expected [Dropped!] but found [Drop Here]
-	at tests.DroppableTests.simpleDragAndDrop(DroppableTests.java:19)
+<td title='tests.ResizableTest.testResizableBoxWithoutRestriction()'><b>testResizableBoxWithoutRestriction</b><br>Test class: tests.ResizableTest</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for pages.ResizablePage$$Lambda/0x000001de012b3b18@1c3259fa (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.38.0&apos;, revision: &apos;6b412e825c*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 150.0.4078.48, fedcm:accounts: true, goog:processID: 29220, ms:edgeOptions: {debuggerAddress: localhost:60724}, msedge: {msedgedriverVersion: 150.0.4078.48 (6362dfa84aa4..., userDataDir: C:\Users\2457272\AppData\Lo...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60724/devtoo..., se:cdpVersion: 150.0.4078.48, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 7825bdb911fe1854fd43547a5c9c5e3e
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at pages.ResizablePage.resizeUnrestrictedBox(ResizablePage.java:99)
+	at tests.ResizableTest.testResizableBoxWithoutRestriction(ResizableTest.java:32)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1817662245", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1817662245'><pre>java.lang.AssertionError: expected [Dropped!] but found [Drop Here]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1590)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:656)
-	at org.testng.Assert.assertEquals(Assert.java:666)
-	at tests.DroppableTests.simpleDragAndDrop(DroppableTests.java:19)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace25916650", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace25916650'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for pages.ResizablePage$$Lambda/0x000001de012b3b18@1c3259fa (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.38.0&apos;, revision: &apos;6b412e825c*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 150.0.4078.48, fedcm:accounts: true, goog:processID: 29220, ms:edgeOptions: {debuggerAddress: localhost:60724}, msedge: {msedgedriverVersion: 150.0.4078.48 (6362dfa84aa4..., userDataDir: C:\Users\2457272\AppData\Lo...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60724/devtoo..., se:cdpVersion: 150.0.4078.48, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 7825bdb911fe1854fd43547a5c9c5e3e
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at pages.ResizablePage.resizeUnrestrictedBox(ResizablePage.java:99)
+	at tests.ResizableTest.testResizableBoxWithoutRestriction(ResizableTest.java:32)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -116,49 +126,8 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </pre></div></td>
-<td>6</td>
-<td>tests.DroppableTests@2f4948e4</td></tr>
-<tr>
-<td title='tests.DroppableTests.preventPropagationDroppable()'><b>preventPropagationDroppable</b><br>Test class: tests.DroppableTests</td>
-<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
-	at tests.DroppableTests.preventPropagationDroppable(DroppableTests.java:44)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1195909598", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1195909598'><pre>java.lang.AssertionError: expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1590)
-	at org.testng.Assert.assertTrue(Assert.java:57)
-	at org.testng.Assert.assertTrue(Assert.java:67)
-	at tests.DroppableTests.preventPropagationDroppable(DroppableTests.java:44)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:697)
-	at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:280)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:76)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:1005)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at org.testng.TestRunner.privateRun(TestRunner.java:744)
-	at org.testng.TestRunner.run(TestRunner.java:616)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div></td>
-<td>6</td>
-<td>tests.DroppableTests@2f4948e4</td></tr>
+<td>24</td>
+<td>tests.ResizableTest@6a78afa0</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -171,58 +140,53 @@ function toggleAllBoxes() {
 <tr>
 <td title='tests.DraggableTest.testSimpleDraggable()'><b>testSimpleDraggable</b><br>Test class: tests.DraggableTest</td>
 <td></td>
-<td>5</td>
-<td>tests.DraggableTest@10683d9d</td></tr>
+<td>4</td>
+<td>tests.DraggableTest@2f4948e4</td></tr>
 <tr>
 <td title='tests.SelectableTest.testSelectableList()'><b>testSelectableList</b><br>Test class: tests.SelectableTest</td>
 <td></td>
 <td>4</td>
-<td>tests.SelectableTest@4802796d</td></tr>
-<tr>
-<td title='tests.SelectableTest.testSelectableGrid()'><b>testSelectableGrid</b><br>Test class: tests.SelectableTest</td>
-<td></td>
-<td>4</td>
-<td>tests.SelectableTest@4802796d</td></tr>
-<tr>
-<td title='tests.DraggableTest.testAxisRestrictedDraggable()'><b>testAxisRestrictedDraggable</b><br>Test class: tests.DraggableTest</td>
-<td></td>
-<td>6</td>
-<td>tests.DraggableTest@10683d9d</td></tr>
-<tr>
-<td title='tests.DraggableTest.testCursorStyleDraggable()'><b>testCursorStyleDraggable</b><br>Test class: tests.DraggableTest</td>
-<td></td>
-<td>8</td>
-<td>tests.DraggableTest@10683d9d</td></tr>
-<tr>
-<td title='tests.SortableTest.testSortableGrid()'><b>testSortableGrid</b><br>Test class: tests.SortableTest</td>
-<td></td>
-<td>5</td>
-<td>tests.SortableTest@3fc2959f</td></tr>
-<tr>
-<td title='tests.ResizableTest.testResizableBoxWithRestriction()'><b>testResizableBoxWithRestriction</b><br>Test class: tests.ResizableTest</td>
-<td></td>
-<td>4</td>
-<td>tests.ResizableTest@1f2586d6</td></tr>
-<tr>
-<td title='tests.ResizableTest.testResizableBoxWithoutRestriction()'><b>testResizableBoxWithoutRestriction</b><br>Test class: tests.ResizableTest</td>
-<td></td>
-<td>4</td>
-<td>tests.ResizableTest@1f2586d6</td></tr>
-<tr>
-<td title='tests.SortableTest.testSortableList()'><b>testSortableList</b><br>Test class: tests.SortableTest</td>
-<td></td>
-<td>5</td>
-<td>tests.SortableTest@3fc2959f</td></tr>
+<td>tests.SelectableTest@71d44a3</td></tr>
 <tr>
 <td title='tests.DroppableTests.testRevertDraggable()'><b>testRevertDraggable</b><br>Test class: tests.DroppableTests</td>
 <td></td>
 <td>11</td>
-<td>tests.DroppableTests@2f4948e4</td></tr>
+<td>tests.DroppableTests@dd05255</td></tr>
+<tr>
+<td title='tests.DraggableTest.testAxisRestrictedDraggable()'><b>testAxisRestrictedDraggable</b><br>Test class: tests.DraggableTest</td>
+<td></td>
+<td>6</td>
+<td>tests.DraggableTest@2f4948e4</td></tr>
+<tr>
+<td title='tests.DraggableTest.testCursorStyleDraggable()'><b>testCursorStyleDraggable</b><br>Test class: tests.DraggableTest</td>
+<td></td>
+<td>10</td>
+<td>tests.DraggableTest@2f4948e4</td></tr>
 <tr>
 <td title='tests.DraggableTest.testContainerRestrictedElegant()'><b>testContainerRestrictedElegant</b><br>Test class: tests.DraggableTest</td>
 <td></td>
-<td>9</td>
-<td>tests.DraggableTest@10683d9d</td></tr>
+<td>12</td>
+<td>tests.DraggableTest@2f4948e4</td></tr>
+<tr>
+<td title='tests.SortableTest.testSortableList()'><b>testSortableList</b><br>Test class: tests.SortableTest</td>
+<td></td>
+<td>4</td>
+<td>tests.SortableTest@1f2586d6</td></tr>
+<tr>
+<td title='tests.ResizableTest.testResizableBoxWithRestriction()'><b>testResizableBoxWithRestriction</b><br>Test class: tests.ResizableTest</td>
+<td></td>
+<td>4</td>
+<td>tests.ResizableTest@6a78afa0</td></tr>
+<tr>
+<td title='tests.SortableTest.testSortableGrid()'><b>testSortableGrid</b><br>Test class: tests.SortableTest</td>
+<td></td>
+<td>4</td>
+<td>tests.SortableTest@1f2586d6</td></tr>
+<tr>
+<td title='tests.SelectableTest.testSelectableGrid()'><b>testSelectableGrid</b><br>Test class: tests.SelectableTest</td>
+<td></td>
+<td>3</td>
+<td>tests.SelectableTest@71d44a3</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-skipped'>
 <tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
@@ -233,60 +197,29 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='tests.DroppableTests.simpleDragAndDrop()'><b>simpleDragAndDrop</b><br>Test class: tests.DroppableTests</td>
-<td><div><pre>java.lang.AssertionError: expected [Dropped!] but found [Drop Here]
-	at tests.DroppableTests.simpleDragAndDrop(DroppableTests.java:19)
+<td title='tests.ResizableTest.testResizableBoxWithoutRestriction()'><b>testResizableBoxWithoutRestriction</b><br>Test class: tests.ResizableTest</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for pages.ResizablePage$$Lambda/0x000001de012b3b18@597f0937 (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.38.0&apos;, revision: &apos;6b412e825c*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 150.0.4078.48, fedcm:accounts: true, goog:processID: 10360, ms:edgeOptions: {debuggerAddress: localhost:58664}, msedge: {msedgedriverVersion: 150.0.4078.48 (6362dfa84aa4..., userDataDir: C:\Users\2457272\AppData\Lo...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58664/devtoo..., se:cdpVersion: 150.0.4078.48, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: d73897383c2191a601ddb278eaeb6d3a
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at pages.ResizablePage.resizeUnrestrictedBox(ResizablePage.java:99)
+	at tests.ResizableTest.testResizableBoxWithoutRestriction(ResizableTest.java:32)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace4015102", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace4015102'><pre>java.lang.AssertionError: expected [Dropped!] but found [Drop Here]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1590)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:656)
-	at org.testng.Assert.assertEquals(Assert.java:666)
-	at tests.DroppableTests.simpleDragAndDrop(DroppableTests.java:19)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:697)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:1005)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at org.testng.TestRunner.privateRun(TestRunner.java:744)
-	at org.testng.TestRunner.run(TestRunner.java:616)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div></td>
-<td>6</td>
-<td>tests.DroppableTests@2f4948e4</td></tr>
-<tr>
-<td title='tests.DroppableTests.preventPropagationDroppable()'><b>preventPropagationDroppable</b><br>Test class: tests.DroppableTests</td>
-<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
-	at tests.DroppableTests.preventPropagationDroppable(DroppableTests.java:44)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1506648430", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1506648430'><pre>java.lang.AssertionError: expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1590)
-	at org.testng.Assert.assertTrue(Assert.java:57)
-	at org.testng.Assert.assertTrue(Assert.java:67)
-	at tests.DroppableTests.preventPropagationDroppable(DroppableTests.java:44)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1818236857", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1818236857'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for pages.ResizablePage$$Lambda/0x000001de012b3b18@597f0937 (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.38.0&apos;, revision: &apos;6b412e825c*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 150.0.4078.48, fedcm:accounts: true, goog:processID: 10360, ms:edgeOptions: {debuggerAddress: localhost:58664}, msedge: {msedgedriverVersion: 150.0.4078.48 (6362dfa84aa4..., userDataDir: C:\Users\2457272\AppData\Lo...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58664/devtoo..., se:cdpVersion: 150.0.4078.48, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: d73897383c2191a601ddb278eaeb6d3a
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at pages.ResizablePage.resizeUnrestrictedBox(ResizablePage.java:99)
+	at tests.ResizableTest.testResizableBoxWithoutRestriction(ResizableTest.java:32)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -314,63 +247,32 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </pre></div></td>
-<td>6</td>
-<td>tests.DroppableTests@2f4948e4</td></tr>
+<td>24</td>
+<td>tests.ResizableTest@6a78afa0</td></tr>
 <tr>
-<td title='tests.DroppableTests.simpleDragAndDrop()'><b>simpleDragAndDrop</b><br>Test class: tests.DroppableTests</td>
-<td><div><pre>java.lang.AssertionError: expected [Dropped!] but found [Drop Here]
-	at tests.DroppableTests.simpleDragAndDrop(DroppableTests.java:19)
+<td title='tests.ResizableTest.testResizableBoxWithoutRestriction()'><b>testResizableBoxWithoutRestriction</b><br>Test class: tests.ResizableTest</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for pages.ResizablePage$$Lambda/0x000001de012b3b18@1442f788 (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.38.0&apos;, revision: &apos;6b412e825c*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 150.0.4078.48, fedcm:accounts: true, goog:processID: 28072, ms:edgeOptions: {debuggerAddress: localhost:51245}, msedge: {msedgedriverVersion: 150.0.4078.48 (6362dfa84aa4..., userDataDir: C:\Users\2457272\AppData\Lo...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51245/devtoo..., se:cdpVersion: 150.0.4078.48, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: d1a51820d8a614c4b347568333a96565
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at pages.ResizablePage.resizeUnrestrictedBox(ResizablePage.java:99)
+	at tests.ResizableTest.testResizableBoxWithoutRestriction(ResizableTest.java:32)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1955948959", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1955948959'><pre>java.lang.AssertionError: expected [Dropped!] but found [Drop Here]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1590)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:656)
-	at org.testng.Assert.assertEquals(Assert.java:666)
-	at tests.DroppableTests.simpleDragAndDrop(DroppableTests.java:19)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:697)
-	at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:280)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:76)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:1005)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at org.testng.TestRunner.privateRun(TestRunner.java:744)
-	at org.testng.TestRunner.run(TestRunner.java:616)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div></td>
-<td>6</td>
-<td>tests.DroppableTests@2f4948e4</td></tr>
-<tr>
-<td title='tests.DroppableTests.preventPropagationDroppable()'><b>preventPropagationDroppable</b><br>Test class: tests.DroppableTests</td>
-<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
-	at tests.DroppableTests.preventPropagationDroppable(DroppableTests.java:44)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace784556863", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace784556863'><pre>java.lang.AssertionError: expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1590)
-	at org.testng.Assert.assertTrue(Assert.java:57)
-	at org.testng.Assert.assertTrue(Assert.java:67)
-	at tests.DroppableTests.preventPropagationDroppable(DroppableTests.java:44)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1897732690", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1897732690'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for pages.ResizablePage$$Lambda/0x000001de012b3b18@1442f788 (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.38.0&apos;, revision: &apos;6b412e825c*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 150.0.4078.48, fedcm:accounts: true, goog:processID: 28072, ms:edgeOptions: {debuggerAddress: localhost:51245}, msedge: {msedgedriverVersion: 150.0.4078.48 (6362dfa84aa4..., userDataDir: C:\Users\2457272\AppData\Lo...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51245/devtoo..., se:cdpVersion: 150.0.4078.48, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: d1a51820d8a614c4b347568333a96565
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at pages.ResizablePage.resizeUnrestrictedBox(ResizablePage.java:99)
+	at tests.ResizableTest.testResizableBoxWithoutRestriction(ResizableTest.java:32)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -398,8 +300,8 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </pre></div></td>
-<td>6</td>
-<td>tests.DroppableTests@2f4948e4</td></tr>
+<td>24</td>
+<td>tests.ResizableTest@6a78afa0</td></tr>
 </table><p>
 </body>
 </html>

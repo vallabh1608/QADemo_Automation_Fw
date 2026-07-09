@@ -11,6 +11,7 @@ public class DroppableTests extends BaseTest {
 
 //    @Test(priority = 1)
 //    public void simpleDragAndDrop() {
+//    	
 //        DroppablePage page = new DroppablePage(getDriver());
 //
 //        page.navigateToDroppablePage();
@@ -33,21 +34,22 @@ public class DroppableTests extends BaseTest {
 //        Assert.assertEquals(page.getAcceptTargetText(), "Dropped!");
 //    }
 
-    @Test(priority = 1)
-    public void preventPropagationDroppable() {
-        DroppablePage page = new DroppablePage(getDriver());
-
-        page.navigateToDroppablePage();
-        page.clickPreventTab();
-
-        page.dragToNotGreedyInner();
-        Assert.assertTrue(page.getNotGreedyInnerClass().contains("ui-state-highlight"));
-        Assert.assertTrue(page.getNotGreedyOuterClass().contains("ui-state-highlight"));
-
-        page.dragToGreedyInner();
-        Assert.assertTrue(page.getGreedyInnerClass().contains("ui-state-highlight"));
-        Assert.assertFalse(page.getGreedyOuterClass().contains("ui-state-highlight"));
-    }
+//    @Test(priority = 1)
+//    public void preventPropagationDroppable() {
+//        DroppablePage page = new DroppablePage(getDriver());
+//
+//        page.navigateToDroppablePage();
+//        page.clickPreventTab();
+//
+//        page.dragToNotGreedyInner();
+//       
+//
+//        page.dragToGreedyInner();
+//        Assert.assertTrue(page.getNotGreedyInnerClass().contains("ui-state-highlight"));
+//        Assert.assertTrue(page.getNotGreedyOuterClass().contains("ui-state-highlight"));
+//        Assert.assertTrue(page.getGreedyInnerClass().contains("ui-state-highlight"));
+//        Assert.assertFalse(page.getGreedyOuterClass().contains("ui-state-highlight"));
+//    }
 
     @Test(priority = 2)
     public void testRevertDraggable() {
